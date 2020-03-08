@@ -31,8 +31,8 @@ boundaryField
 
     nozzle_outlet_m
     {
-        type            totalPressure;
-        p0              uniform 0;
+        type            uniformFixedValue;
+        uniformValue    0;
     }
 
     // walls
