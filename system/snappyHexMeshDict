@@ -37,8 +37,8 @@ geometry
     intake
     {
       type searchableBox;
-      min (-1 -51 -1);
-      max (1 -49 1);
+      min (-1 49 -1);
+      max (1 51 1);
     }
 }
 
