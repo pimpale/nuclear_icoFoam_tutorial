@@ -62,12 +62,11 @@ boundaryField
     nozzle_inlet_m
     {
         type            uniformFixedValue;
-        uniformValue    (0 -300 0);
+        uniformValue    (0 -90 0);
     }
     nozzle_outlet_m
     {
-        type            pressureInletOutletVelocity;
-        value           uniform (0 0 0);
+        type            zeroGradient;
     }
 }
 

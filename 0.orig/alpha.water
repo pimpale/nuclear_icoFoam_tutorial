@@ -52,9 +52,7 @@ boundaryField
 
     nozzle_outlet_m
     {
-      type inletOutlet;
-      inletValue uniform 0;
-      value uniform 0;
+      type zeroGradient;
     }
 }
 
