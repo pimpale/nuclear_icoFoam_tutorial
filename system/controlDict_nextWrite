@@ -23,7 +23,7 @@ startTime       0;
 
 stopAt          nextWrite;
 
-endTime         2;
+endTime         10;
 
 deltaT          0.001;
 
