@@ -34,7 +34,7 @@ boundaryField
     nozzle_radioactive_wall_m
     {
         type            uniformFixedValue;
-        uniformValue    10;
+        uniformValue    300;
     }
     nozzle_reaction_pre_wall_m
     {
