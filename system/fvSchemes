@@ -15,6 +15,7 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
+
 ddtSchemes
 {
     default         Euler;
@@ -23,21 +24,20 @@ ddtSchemes
 gradSchemes
 {
     default         Gauss linear;
+    grad(p)         Gauss linear;
+    grad(nv)        Gauss linear;
 }
 
 divSchemes
 {
-    div(rhoPhi,U)   Gauss upwind;
-    div(phi,alpha)  Gauss vanLeer;
-    div(phi,omega)  Gauss upwind;
-    div(phi,k)  Gauss upwind;
-    div(phirb,alpha) Gauss linear;
-    div(((rho*nuEff)*dev2(T(grad(U))))) Gauss linear;
+    default         none;
+    div(phi,U)      Gauss linear;
+    div(phi,nv)      Gauss linear;
 }
 
 laplacianSchemes
 {
-    default         Gauss linear limited corrected 0.333;
+    default         Gauss linear orthogonal;
 }
 
 interpolationSchemes
@@ -47,13 +47,7 @@ interpolationSchemes
 
 snGradSchemes
 {
-    default         limited corrected 0.333;
+    default         orthogonal;
 }
-
-wallDist
-{
-    method meshWave;
-}
-
 
 // ************************************************************************* //
