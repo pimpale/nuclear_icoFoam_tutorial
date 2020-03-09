@@ -1,0 +1,60 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7  
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    object      nv;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 -3 0 0 1 0 0]; // Molarity of neutron flux
+
+internalField   uniform 0;
+
+boundaryField
+{
+
+    nozzle_expand_wall_m
+    {
+        type            zeroGradient;
+    }
+    nozzle_fuel_wall_m
+    {
+        type            zeroGradient;
+    }
+    nozzle_radioactive_wall_m
+    {
+        type            uniformFixedValue;
+        uniformValue    5;
+    }
+    nozzle_reaction_pre_wall_m
+    {
+        type            zeroGradient;
+    }
+    nozzle_reaction_wall_m
+    {
+        type            zeroGradient;
+    }
+
+
+
+    // Actually useful stuff
+    nozzle_inlet_m
+    {
+        type            zeroGradient;
+    }
+    nozzle_outlet_m
+    {
+        type            zeroGradient;
+    }
+}
+
+
+// ************************************************************************* //
