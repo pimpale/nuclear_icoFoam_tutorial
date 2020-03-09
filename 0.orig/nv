@@ -23,24 +23,28 @@ boundaryField
 
     nozzle_expand_wall_m
     {
-        type            zeroGradient;
+        type            uniformFixedValue;
+        uniformValue    0;
     }
     nozzle_fuel_wall_m
     {
-        type            zeroGradient;
+        type            uniformFixedValue;
+        uniformValue    0;
     }
     nozzle_radioactive_wall_m
     {
         type            uniformFixedValue;
-        uniformValue    5;
+        uniformValue    10;
     }
     nozzle_reaction_pre_wall_m
     {
-        type            zeroGradient;
+        type            uniformFixedValue;
+        uniformValue    0;
     }
     nozzle_reaction_wall_m
     {
-        type            zeroGradient;
+        type            uniformFixedValue;
+        uniformValue    0;
     }
 
 
@@ -48,7 +52,8 @@ boundaryField
     // Actually useful stuff
     nozzle_inlet_m
     {
-        type            zeroGradient;
+        type            uniformFixedValue;
+        uniformValue    0;
     }
     nozzle_outlet_m
     {

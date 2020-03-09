@@ -33,13 +33,6 @@ geometry
         type triSurfaceMesh;
         name nozzle;
     }
-
-    intake
-    {
-      type searchableBox;
-      min (-1 49 -1);
-      max (1 51 1);
-    }
 }
 
 
@@ -143,11 +136,6 @@ castellatedMeshControls
 
     refinementRegions
     {
-      intake
-      {
-          mode inside;
-          levels ((1.0 5));         // refinement level 4 (1.0 entry ignored)
-      }
     }
 
 
