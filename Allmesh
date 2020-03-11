@@ -4,14 +4,9 @@ cd ${0%/*} || exit 1    # Run from this directory
 # Source tutorial run functions
 . $WM_PROJECT_DIR/bin/tools/RunFunctions
 
-application=$(getApplication)
-
-./Allmesh
-
-# Initialize alpha
-runApplication setFields
-
-# Run
-runApplication $application
+# Meshing
+runApplication blockMesh
+runApplication surfaceFeatures
+runApplication snappyHexMesh -overwrite
 
 #------------------------------------------------------------------------------

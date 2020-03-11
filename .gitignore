@@ -2,5 +2,5 @@
 processor*
 log.*
 [0-9]*
-!0.orig
+!0
 constant/polyMesh
